@@ -7,26 +7,30 @@ const fs = require('fs');
 fetch('https://memegen-link-examples-upleveled.netlify.app/')
   .then((res) => res.text())
   .then((html) => {
-    // 2. Identify the pictures.
-    const $ = cheerio.load(html); // gets the HTML code of the entire website
-    console.log($('img').attr('src')); // gets one URL link of the HTML code
+    // 2. Identify all the pictures on the website.
 
-    // const url = [$('img').attr('src')];
-    // console.log(url);
+    const $ = cheerio.load(html); // gets the HTML code of the entire website.
 
-    const elements = $('img').attr('src');
-    console.log(elements);
+    const ImagesArray = []; //the loop sorts out the first 10 images and puts them into an array.
 
-    //the loop sorts out the first 10 images and downloads them
+    $("[href$='.jpg']").each(function () {
+      const link = $(this).html().split('"');
+      ImagesArray.push(link[1]);
+    });
+
     for (let i = 0; i < 10; i++) {
-      const images = elements[(0, 9)];
-      console.log(images);
-    }
+      const Images = ImagesArray[i];
 
+      const FinalImagesArray = []; // first 10 images are put to an array.
+      FinalImagesArray.push(Images);
+
+      console.log(FinalImagesArray);
+    }
     $.html();
   });
 
 // 3. Create a memes folder if it doesn't exist yet
+
 const dir = './memes';
 try {
   if (!fs.existsSync(dir)) {
@@ -35,10 +39,6 @@ try {
 } catch (err) {
   console.error(err);
 }
-
-// 4. Get an array of picture URLs.
-
-// 5. Identify the 10 first Pic URLs
 
 // 6. Loop over the array for 10 times.
 
