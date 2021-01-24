@@ -42,9 +42,9 @@ fetch('https://memegen-link-examples-upleveled.netlify.app/')
 
     // Loop to download the first 10 images and save them to the new folder 'memes'.
 
-    for (i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
       const file = fs.createWriteStream(`./memes/memes${i}.jpg`);
-      const requestNew = https.get(finalImagesArray[i], function (response) {
+      https.get(finalImagesArray[i], function (response) {
         response.pipe(file);
       });
     }

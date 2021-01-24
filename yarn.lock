@@ -1238,11 +1238,6 @@ htmlparser2@^6.0.0:
     domutils "^2.4.4"
     entities "^2.0.0"
 
-https@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/https/-/https-1.0.0.tgz#3c37c7ae1a8eeb966904a2ad1e975a194b7ed3a4"
-  integrity sha1-PDfHrhqO65ZpBKKtHpdaGUt+06Q=
-
 ignore@^4.0.6:
   version "4.0.6"
   resolved "https://registry.npmjs.org/ignore/-/ignore-4.0.6.tgz"
@@ -1252,11 +1247,6 @@ ignore@^5.1.4:
   version "5.1.8"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.1.8.tgz"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
-
-image-downloader@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.npmjs.org/image-downloader/-/image-downloader-4.0.2.tgz"
-  integrity sha512-lk3kQ5dwGMZz2Q1UHAFVOhTLW73lV55s5DSM4rDPttEKtRrf9yEWxwRlXp9xIr7owvTeIEAc4VCPAghunlNxzQ==
 
 import-fresh@^3.0.0:
   version "3.3.0"
